@@ -3,6 +3,7 @@
 
 int main(int argc, char** argv)
 {
+<<<<<<< HEAD
     char name[255];
 
     printf("Enter your name: ");
@@ -11,5 +12,17 @@ int main(int argc, char** argv)
     name[strlen(name) - 1] = '\0'; /* remove the newline at the end */
 
     printf("Hello %s!\n", name);
+=======
+    char first[255], last[255];
+
+    printf("Enter your first name: ");
+    fgets(first, 255, stdin);
+    first[strlen(first) - 1] = '\0'; /* remove the newline at the end */
+
+    printf("Now enter your last name: ");
+    gets(last); /* buffer overflow? what's that? */
+
+    printf("Hello %s %s!\n", first, last);
+>>>>>>> 930f23b37780d8224005b200afa3e236ff5cc178
     return 0;
 }
